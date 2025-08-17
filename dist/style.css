@@ -1,0 +1,78 @@
+/* Fundo roxo */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #6a0dad; /* roxo sólido */
+}
+
+/* Container do mural */
+.mural {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px;
+  justify-content: center;
+}
+
+/* Post-its */
+.bilhete {
+  width: 220px;
+  min-height: 150px;
+  padding: 15px;
+  background: #fffa8b;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+  transform: rotate(-2deg);
+  transition: 0.3s;
+  border-radius: 8px;
+}
+
+.bilhete:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.bilhete.verde {
+  background: #b8ffb0;
+  transform: rotate(2deg);
+}
+
+.bilhete.rosa {
+  background: #ffd1dc;
+  transform: rotate(-3deg);
+}
+
+/* Fotos */
+.foto {
+  width: 220px;
+  background: white;
+  padding: 10px;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+  transform: rotate(1deg);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.foto img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.foto p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Música */
+iframe {
+  border-radius: 12px;
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Responsividade para celular */
+@media(max-width: 600px) {
+  .bilhete, .foto {
+    width: 100%;
+    transform: rotate(0);
+  }
+}
